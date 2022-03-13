@@ -1,4 +1,3 @@
-C:\Users\sdlouha\Git\iot-aggregator\src\test\java\com\cleverlance\academy\aggregator\controller\AggregatorControllerTest.java
-C:\Users\sdlouha\Git\iot-aggregator\src\test\java\com\cleverlance\academy\aggregator\IotServerAggregatorApplicationTests.java
-C:\Users\sdlouha\Git\iot-aggregator\src\test\java\com\cleverlance\academy\aggregator\controller\mapper\WeatherValuesMapperTest.java
-C:\Users\sdlouha\Git\iot-aggregator\src\test\java\com\cleverlance\academy\aggregator\controller\mapper\IdentificationMapperTest.java
+C:\Users\sdlouha\Git\iot-server\src\test\java\com\cleverlance\academy\iotServer\IotServerApplicationTests.java
+C:\Users\sdlouha\Git\iot-server\src\test\java\com\cleverlance\academy\iotServer\controller\WeatherValuesControllerTest.java
+C:\Users\sdlouha\Git\iot-server\src\test\java\com\cleverlance\academy\iotServer\controller\mapper\WeatherValuesMapperTest.java

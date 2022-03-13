@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cleverlance.academy</groupId>
-	<artifactId>aggregator</artifactId>
+	<artifactId>iot-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>IOS Server aggregator</name>
+	<name>IOS Server</name>
 	<description>Springboot Cleverlance academy project</description>
 	<properties>
 		<java.version>11</java.version>

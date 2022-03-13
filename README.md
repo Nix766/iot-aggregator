@@ -1,1 +1,1 @@
-# iot-aggregator
+# iot-server

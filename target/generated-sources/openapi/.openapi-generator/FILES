@@ -3,8 +3,4 @@ README.md
 pom.xml
 src/gen/java/main/org/openapitools/api/ApiUtil.java
 src/gen/java/main/org/openapitools/api/DataApi.java
-src/gen/java/main/org/openapitools/api/IdentificationApi.java
-src/gen/java/main/org/openapitools/model/Address.java
-src/gen/java/main/org/openapitools/model/Identification.java
 src/gen/java/main/org/openapitools/model/MeteoData.java
-src/gen/java/main/org/openapitools/model/Owner.java
