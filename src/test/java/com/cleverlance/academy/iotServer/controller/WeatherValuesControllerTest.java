@@ -32,6 +32,7 @@ class WeatherValuesControllerTest {
                 .andExpect(jsonPath("$[0].pressure").value("50"))
                 .andExpect(jsonPath("$[0].light").value("60"));
 
-    }
+
+        }
 
 }

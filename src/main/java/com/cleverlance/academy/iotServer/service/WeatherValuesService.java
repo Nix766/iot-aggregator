@@ -7,6 +7,6 @@ import java.util.List;
 public interface WeatherValuesService {
 
     List<WeatherValues> getValues();
-    Void saveValues(WeatherValues values);
+    void saveValues(WeatherValues values);
 
 }

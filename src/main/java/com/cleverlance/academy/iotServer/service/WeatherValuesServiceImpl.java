@@ -1,7 +1,7 @@
 package com.cleverlance.academy.iotServer.service;
 
 import com.cleverlance.academy.iotServer.model.WeatherValues;
-import com.cleverlance.academy.iotServer.repository.WeatherValuesRepository;
+import com.cleverlance.academy.iotServer.repository.JpaWeatherValuesRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,20 +9,21 @@ import java.util.List;
 @Service
 public class WeatherValuesServiceImpl implements WeatherValuesService{
 
-    private WeatherValuesRepository weatherValuesRepository;
+    private JpaWeatherValuesRepository jpaWeatherValuesRepository;
 
-    public WeatherValuesServiceImpl(WeatherValuesRepository weatherValuesRepository) {
-        this.weatherValuesRepository = weatherValuesRepository;
+    public WeatherValuesServiceImpl(JpaWeatherValuesRepository weatherValuesRepository) {
+        this.jpaWeatherValuesRepository = weatherValuesRepository;
     }
 
     @Override
     public List<WeatherValues> getValues() {
-        return this.weatherValuesRepository.getValues();
+        return this.jpaWeatherValuesRepository.findAll();
     }
 
     @Override
-    public Void saveValues(WeatherValues values) {
-        this.weatherValuesRepository.saveValues(values);
-        return null;
+    public void saveValues(WeatherValues values) {
+                                    // uloz a commitni
+        this.jpaWeatherValuesRepository.saveAndFlush(values);
+
     }
 }

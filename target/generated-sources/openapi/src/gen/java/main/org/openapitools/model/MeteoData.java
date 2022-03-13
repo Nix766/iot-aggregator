@@ -19,7 +19,7 @@ import javax.annotation.Generated;
  * MeteoData
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-13T12:43:32.256914200+01:00[Europe/Prague]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-13T19:40:07.472141500+01:00[Europe/Prague]")
 public class MeteoData   {
 
   @JsonProperty("humidity")

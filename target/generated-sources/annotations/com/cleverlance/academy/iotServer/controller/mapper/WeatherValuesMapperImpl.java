@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-03-13T12:44:23+0100",
+    date = "2022-03-13T19:40:11+0100",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.11 (Amazon.com Inc.)"
 )
 @Component
@@ -38,25 +38,20 @@ public class WeatherValuesMapperImpl implements WeatherValuesMapper {
             return null;
         }
 
-        long temperature = 0L;
-        long humidity = 0L;
-        long pressure = 0L;
-        long light = 0L;
+        WeatherValues weatherValues = new WeatherValues();
 
         if ( meteoData.getTemperature() != null ) {
-            temperature = meteoData.getTemperature().longValue();
+            weatherValues.setTemperature( meteoData.getTemperature().longValue() );
         }
         if ( meteoData.getHumidity() != null ) {
-            humidity = meteoData.getHumidity().longValue();
+            weatherValues.setHumidity( meteoData.getHumidity().longValue() );
         }
         if ( meteoData.getPressure() != null ) {
-            pressure = meteoData.getPressure().longValue();
+            weatherValues.setPressure( meteoData.getPressure().longValue() );
         }
         if ( meteoData.getLight() != null ) {
-            light = meteoData.getLight().longValue();
+            weatherValues.setLight( meteoData.getLight().longValue() );
         }
-
-        WeatherValues weatherValues = new WeatherValues( temperature, humidity, pressure, light );
 
         return weatherValues;
     }
