@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.cleverlance.academy.aggregator.controller.mapper.WeatherValuesMapperTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in com.cleverlance.academy.aggregator.controller.mapper.WeatherValuesMapperTest
+toMeteodata  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: java.lang.Long@f237ae7<20> but was: java.math.BigDecimal@42edde25<20>
+	at com.cleverlance.academy.aggregator.controller.mapper.WeatherValuesMapperTest.toMeteodata(WeatherValuesMapperTest.java:21)
+

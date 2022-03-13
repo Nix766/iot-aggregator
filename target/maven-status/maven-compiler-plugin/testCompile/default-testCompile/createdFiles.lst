@@ -1,0 +1,4 @@
+com\cleverlance\academy\aggregator\controller\AggregatorControllerTest.class
+com\cleverlance\academy\aggregator\controller\mapper\IdentificationMapperTest.class
+com\cleverlance\academy\aggregator\IotServerAggregatorApplicationTests.class
+com\cleverlance\academy\aggregator\controller\mapper\WeatherValuesMapperTest.class
