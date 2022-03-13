@@ -1,4 +1,4 @@
-package com.cleverlance.academy.aggregator.controller.model;
+package com.cleverlance.academy.aggregator.model;
 
 import lombok.Value;
 

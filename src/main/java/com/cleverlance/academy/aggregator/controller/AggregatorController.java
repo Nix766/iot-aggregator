@@ -1,9 +1,11 @@
 package com.cleverlance.academy.aggregator.controller;
 
-import com.cleverlance.academy.aggregator.controller.model.Address;
-import com.cleverlance.academy.aggregator.controller.model.Identification;
-import com.cleverlance.academy.aggregator.controller.model.Person;
+import com.cleverlance.academy.aggregator.model.Identification;
+import com.cleverlance.academy.aggregator.model.Person;
+import com.cleverlance.academy.aggregator.model.WeatherValues;
+import com.cleverlance.academy.aggregator.service.PersonService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,13 +20,15 @@ import java.util.List;
 public class AggregatorController {
 
     private final List<Identification> identifications = new ArrayList<>();
+    private final List<WeatherValues> weatherValues = new ArrayList<>();
 
-    @GetMapping(path = "/identification")
-    public ResponseEntity<Identification> welcome() {
-        return ResponseEntity.ok(new Identification("Moje meteostanice",
-                                                    new Address("Čáslavská", "1793/15", "Praha 3"),
-                                                    new Person("Šárka", "Dlouhá")));
+    private final PersonService personService;
+
+    public AggregatorController(PersonService personService) {
+        this.personService = personService;
     }
+
+
 
 // registrace moji aplikace pro agregator
     @PostMapping("/server")            // musime springu rict, ze identification je to, co prijde v tele zpravy
@@ -42,5 +46,10 @@ public class AggregatorController {
     }
 
 
+    @PostMapping("/person")
+    public ResponseEntity<Void> savePerson(@RequestBody Person person) {
+
+        return ResponseEntity.ok().build();
+    }
 
 }

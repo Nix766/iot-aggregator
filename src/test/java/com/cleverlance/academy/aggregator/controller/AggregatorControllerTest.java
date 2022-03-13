@@ -26,13 +26,34 @@ class AggregatorControllerTest {
     private MockMvc mockMvc;
     @Test
     void test() throws Exception {
+        // test registrace, puvodni metoda
         this.mockMvc.perform(post("/server").contentType("application/json")
-                .content("{\"name\": \"aaa\", \"address.street\": \"caslavska\"}")).andExpect(status().isOk());
+                .content("{\"name\": \"aaa\", \"address\": {\"city\": \"Praha\", \"street\": \"caslavska\", \"houseNumber\": \"23\"}, \"owner\": {\"firstName\": \"katerina\", \"lastName\": \"gottwald\"}}"))
+                .andExpect(status().isOk());
         this.mockMvc.perform(get("/server")).andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("aaa"))
- //               .andExpect(jsonPath("$[0].address.street").value("aaa"))
-        ;
+                .andExpect(jsonPath("$[0].address.street").value("caslavska"))
+                .andExpect(jsonPath("$[0].address.houseNumber").value("23"))
+                .andExpect(jsonPath("$[0].address.city").value("Praha"))
+                .andExpect(jsonPath("$[0].owner.firstName").value("katerina"))
+                .andExpect(jsonPath("$[0].owner.lastName").value("gottwald"));
+
+        // test identifikace - nove api - nefunuje nevim proc
+//        this.mockMvc.perform(get("/identification")).andDo(print()).andExpect(status().isOk())
+//                .andExpect(jsonPath("$[0].name").value("Moje meteostanice sarka"));
+
+        // test ulozeni a vraceni hodnot z meteostanice - nove api
+        // ulozeni hodnot
+ //       this.mockMvc.perform(post("/data").contentType("application/json")
+                //.content("{\"temperatureInCelsius\": \"20\", \"humidityPercentage\": \"47\", \"pressure\": \"50\", \"light\": \"60\"}")).andExpect(status().isOk());
+ //               .content("{\"humidity\": \"20\"}")).andExpect(status().isOk());
+//        this.mockMvc.perform(get("/data")).andDo(print())
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$[0].temperatureInCelsius").value("20"))
+//                .andExpect(jsonPath("$[0].humidityPercentage").value("47"))
+//                .andExpect(jsonPath("$[0].pressure").value("50"))
+//                .andExpect(jsonPath("$[0].light").value("60"));
 
     }
 
