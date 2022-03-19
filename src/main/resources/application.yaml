@@ -1,5 +1,7 @@
 spring:
   liquibase:
+    enabled: true
+  flyway:
     enabled: false
   h2:
     console:

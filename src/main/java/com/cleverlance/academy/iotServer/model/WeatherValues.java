@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.Instant;
 
 @Data
 @Entity
@@ -20,16 +21,19 @@ public class WeatherValues {
         private long humidity;
         private long pressure;
         private long light;
+        private Instant createdDate;
 
         public WeatherValues(long temperature, long humidity, long pressure, long light) {
                 this.temperature = temperature;
                 this.humidity = humidity;
                 this.pressure = pressure;
                 this.light = light;
+                this.createdDate = Instant.now();
         }
 
         @Autowired
         public WeatherValues() {
+                this.createdDate = Instant.now();
         }
 
 

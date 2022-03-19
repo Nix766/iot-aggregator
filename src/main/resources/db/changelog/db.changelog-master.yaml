@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      author: sarka
+      id: 1
+      changes:
+        - createSequence:
+            sequenceName: hibernate_sequence
+            startValue: 1
+            incrementBy: 1
+        - createTable:
+            tableName: weather_values
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: humidity
+                  type: number
+              - column:
+                  name: light
+                  type: number
+              - column:
+                  name: pressure
+                  type: number
+              - column:
+                  name: temperature
+                  type: number
+              - column:
+                  name: created_date
+                  type: timestamp
