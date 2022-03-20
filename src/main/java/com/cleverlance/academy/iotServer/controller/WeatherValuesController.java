@@ -22,8 +22,11 @@ public class WeatherValuesController implements DataApi {
     }
 
     @Override
-    public ResponseEntity<List<MeteoData>> getData() {
-        List<WeatherValues> weatherValues = this.weatherValuesService.getValues();
+    public ResponseEntity<List<MeteoData>> getData(Integer pageSize, Integer pageNumber) {
+        if (pageSize > 10) {
+            pageSize = 10;
+        }
+        List<WeatherValues> weatherValues = this.weatherValuesService.getValues(pageSize, pageNumber);
         return ResponseEntity.ok(weatherValuesMapper.toMeteoData(weatherValues));
 
     }
