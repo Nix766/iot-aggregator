@@ -1,3 +1,4 @@
+com\cleverlance\academy\iotServer\controller\WeatherValuesController.class
 com\cleverlance\academy\iotServer\service\WeatherValuesServiceImpl.class
 com\cleverlance\academy\iotServer\model\WeatherValues.class
 org\openapitools\api\DataApi.class
@@ -9,3 +10,4 @@ com\cleverlance\academy\iotServer\validation\GenderValidator.class
 com\cleverlance\academy\iotServer\repository\JpaWeatherValuesRepository.class
 com\cleverlance\academy\iotServer\service\WeatherValuesService.class
 org\openapitools\model\MeteoData.class
+com\cleverlance\academy\iotServer\controller\mapper\WeatherValuesMapperImpl.class

@@ -16,7 +16,7 @@ public class WeatherValuesServiceImpl implements WeatherValuesService{
     }
 
     @Override
-    public List<WeatherValues> getValues(Integer pageSize, Integer pageNumber) {
+    public List<WeatherValues> getValues() {
         return this.jpaWeatherValuesRepository.findAll();
     }
 
