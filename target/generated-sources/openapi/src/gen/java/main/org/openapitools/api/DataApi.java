@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-20T11:45:40.726527600+01:00[Europe/Prague]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-03-14T11:54:38.962992+01:00[Europe/Prague]")
 @Validated
 @Tag(name = "data", description = "the data API")
 public interface DataApi {
@@ -41,8 +41,6 @@ public interface DataApi {
     /**
      * GET /data : Metoda nacte vsechny data
      *
-     * @param pageSize  (required)
-     * @param pageNumber  (required)
      * @return successful operation (status code 200)
      *         or Invalid status value (status code 400)
      */
@@ -60,8 +58,7 @@ public interface DataApi {
         produces = { "application/json" }
     )
     default ResponseEntity<List<MeteoData>> getData(
-        @NotNull @Parameter(name = "pageSize", description = "", required = true, schema = @Schema(description = "")) @Valid @RequestParam(value = "pageSize", required = true) Integer pageSize,
-        @NotNull @Parameter(name = "pageNumber", description = "", required = true, schema = @Schema(description = "")) @Valid @RequestParam(value = "pageNumber", required = true) Integer pageNumber
+        
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {

@@ -1,0 +1,3 @@
+com\cleverlance\academy\iotServer\IotServerApplicationTests.class
+com\cleverlance\academy\iotServer\controller\WeatherValuesControllerTest.class
+com\cleverlance\academy\iotServer\controller\mapper\WeatherValuesMapperTest.class
