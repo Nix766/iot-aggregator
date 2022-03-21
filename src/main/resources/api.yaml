@@ -30,6 +30,17 @@ paths:
     get:
       summary: Metoda nacte vsechny data
       operationId: getData
+      parameters:
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+          required: true
+        - name: pageNumber
+          in: query
+          schema:
+            type: integer
+          required: true
       responses:
         '200':
           description: successful operation

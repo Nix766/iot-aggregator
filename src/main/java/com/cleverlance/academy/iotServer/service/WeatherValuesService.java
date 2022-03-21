@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface WeatherValuesService {
 
-    List<WeatherValues> getValues();
+    List<WeatherValues> getValues(Integer pageSize, Integer pageNumber);
     void saveValues(WeatherValues values);
 
 }
